@@ -8,8 +8,9 @@ body {
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
+
+/* general */
 
 .container {
   width: 100%;
@@ -48,6 +49,8 @@ h2,
 h3 {
   font-size: 22px;
 }
+
+/* header */
 
 #masthead {
   position: fixed;
@@ -93,6 +96,8 @@ nav a:first-child {
   border-left: 0 none;
 }
 
+/* footer */
+
 footer {
   padding: 30px 0;
   clear: both;
@@ -103,6 +108,8 @@ footer {
   background: #666;
   border-top: 8px solid #4aaaa5;
 }
+
+/* sidebar */
 
 .sidebar {
   float: right;
@@ -133,6 +140,8 @@ h3,
   margin-right: 0;
 }
 
+/* main */
+
 #main-container {
   padding-top: 130px;
 }
@@ -146,6 +155,50 @@ h3,
   background: #fff;
   border: 1px solid #ddd;
 }
+
+/* portfolio page */
+
+.work {
+  position: relative;
+  float: left;
+  width: 274px;
+  margin: 20px 0 25px;
+  overflow: auto;
+}
+
+.work:nth-child(even) {
+  margin-right: 40px;
+}
+
+.work img {
+  width: 100%;
+  border: 0 none;
+  opacity: 0.8;
+}
+
+.work h3 {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  background: #4aaaa5;
+  border-bottom: 0;
+}
+
+.auth-image {
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 25px;
+}
+
+/* contact page */
 
 #contact-form ul {
   margin-bottom: 20px;
@@ -183,4 +236,95 @@ input[type=submit] {
   cursor: pointer;
   background: #4aaaa5;
   border: 0 none;
+}
+@media (max-width:640px) {
+  display: flex;
+  .container{
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+}
+  #logo {
+  max-width: 100%;
+  text-align:center;
+}
+  #masthead { 
+  flex:1;
+  text-align: center;
+}
+ 
+  .nav { 
+    max-width: 100%;
+    flex-wrap:wrap;
+    text-align: center
+}
+  .sidebar {
+    flex-wrap: wrap;
+    margin-right:275px;
+}
+@media (max-width:768px) {
+  .container {
+    position: sticky;
+    text-align: center;
+}  
+  #masthead {
+    position:sticky;
+    text-align: center
+}
+  .nav {
+    position: sticky;
+  
+}
+ #main-container {
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    padding: 3em;
+    text-align: center;
+}
+  .work {
+    position: sticky;
+    height: 100%;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+ .sidebar { 
+    position: relative;
+}  
+  #connect { 
+    float: left;
+    margin: 0;
+}
+}    
+@media (max-width: 980px) {
+  .container {
+    position: sticky;
+    text-align: center;
+}  
+  #masthead {
+    position:sticky;
+    text-align: center
+}
+  .nav {
+    position: sticky;
+  
+}
+ #main-container {
+    display: flex;
+}
+.main-section {
+  flex: 1;
+}
+  .work {
+    flex-direction: column;
+    position: sticky;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sidebar { 
+  flex: 1;
+}
+}
 }
